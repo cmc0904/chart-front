@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <style>
+        /* Layout */
+        @font-face {
+            font-family: 'Happiness-Sans-Title';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'Happiness-Sans-Title';
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        #main {
+            background-color: #f0f0f0; /* 아주 살짝 연한 회색 */
+        }
+
+        #header {
+            background-color: #434343;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+        }
+
+        #header span {
+            text-align: center;
+            line-height: 80px;
+            font-size: 35px;
+            color: #fff;
+        }
+
+        #section {
+            align-items: center;
+        }
+        /* ----- */
+
+        /* Search box */
+        .search-box {
+            padding: 10px;
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 5px #aaaaaa;
+            border-radius: 5px;
+        }
+
+        .search-mode > select{
+            width: 100%;
+            height: 35px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        .input-box {
+            margin-top: 10px;
+            display: flex; /* flex 컨테이너로 설정 */
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .input-box input{
+            flex: 10;
+            padding: 10px 5px;
+            border-radius: 3px;
+        }
+
+        .input-box button {
+            border-radius: 3px;
+            margin-left: 5px;
+            padding: 10px;
+        }
+
+        /* Card */
+        .card-box {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 2px 2px 5px #aaaaaa;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+        }
+
+        .card-name {
+            flex: 4;
+        }
+
+        .card-value {
+            color: red;
+        }
+
+        .card > div {
+            margin-top: 10px;
+        }
+
+
+        /* ----- */
+    </style>
+</head>
+<body>
+    <header id="header">
+        <span>Chart</span>
+    </header>
+
+    <section id="section">
+        <div class="card">
+            <span class="card-name">가장 장애가 많이 일어난 장비 이름</span>
+            <span class="card-value">개포동1264-13다세대주택</span>
+        </div>
+
+        <div class="search-box">
+            <div class="search-mode">
+                <select>
+                    <option>장비명으로 검색</option>
+                    <option>기간별 검색</option>
+                </select>
+            </div>
+            <div>
+                <div class="input-box">
+                    <input placeholder="장비 이름을 검색 입력 해주세요."/>
+                    <button type="submit">검색</button>
+                </div>
+
+                <div class="device-list">
+                    <div class="device">
+                        <span>
+                            하이
+                        </span>
+
+                        <span>
+                            <input type="radio" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-box">
+            <div class="card">
+                <span class="card-name">CPU 평균 온도</span>
+                <span class="card-value">65°C</span>
+            </div>
+
+            <div class="card">
+                <span class="card-name">평균 CPU 사용량</span>
+                <span class="card-value">80%</span>
+            </div>
+
+            <div class="card">
+                <span class="card-name">평균 메모리 사용량</span>
+                <span class="card-value">80%</span>
+            </div>
+
+            <div class="card">
+                <span class="card-name">평균 메모리 사용량</span>
+                <span class="card-value">80%</span>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>
